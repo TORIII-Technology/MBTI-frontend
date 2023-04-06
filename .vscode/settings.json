@@ -1,0 +1,6 @@
+{
+  "cSpell.words": ["navopen", "opennav"],
+  "editor.tabCompletion": "onlySnippets",
+  "auto-close-tag.fullMode": true,
+  "auto-close-tag.insertSpaceBeforeSelfClosingTag": true
+}

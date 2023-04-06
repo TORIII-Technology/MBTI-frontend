@@ -1,0 +1,523 @@
+/* #Reset
+--------------------------------------------------------------- */
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+html {
+  font-size: 18px;
+  height: 100%;
+}
+main,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  /* Override the default (display: inline) for browsers that do not recognize HTML5 tags. IE8 (and lower) requires a shiv: http://ejohn.org/blog/html5-shiv */
+  display: block;
+}
+b,
+strong {
+  /* Makes browsers agree. IE + Opera = font-weight: bold. Gecko + WebKit = font-weight: bolder. */
+  font-weight: bold;
+  font-weight: 900;
+}
+li {
+  /* For IE6 + IE7: "display: list-item" keeps bullets from disappearing if hasLayout is triggered. */
+  display: list-item;
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td,
+caption {
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+sub,
+sup,
+small {
+  font-size: 10px;
+}
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+svg {
+  /* For IE9. Without, occasionally draws shapes outside the boundaries of <svg> rectangle. */
+  overflow: hidden;
+}
+p:empty {
+  display: none !important;
+}
+i {
+  font-style: normal;
+}
+/* #General
+--------------------------------------------------------------- */
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: #a661eb;
+}
+
+::selection {
+  color: #fff;
+  background: #a661eb;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  /*text-rendering: optimizeLegibility;*/
+}
+
+/* Transition preload fix */
+.nm-preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+/* Float */
+.fl-right {
+  float: right;
+}
+.fl-left {
+  float: left;
+}
+
+/* Clear fix */
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+/* Padding control */
+.nopad-left {
+  padding-left: 0;
+}
+.nopad-right {
+  padding-right: 0;
+}
+.nopad {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Misc. */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+a {
+  text-decoration: none;
+}
+a {
+  color: #000;
+  outline: 0;
+}
+a:hover {
+  color: #000;
+}
+.touch a:hover {
+  color: inherit;
+}
+a.dark {
+  color: #fff;
+}
+a.gray,
+a.invert-color {
+  color: #888;
+}
+a.dark:hover,
+a.gray:hover,
+a.invert-color:hover {
+  color: #dc9814;
+}
+.round {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.nm-bullet-list {
+  padding-bottom: 20px;
+}
+.nm-bullet-list li {
+  list-style: disc inside;
+}
+.push-right {
+  float: right;
+}
+.push-left {
+  float: left;
+}
+
+/* Forms */
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='time'],
+input[type='month'],
+input[type='week'],
+input[type='email'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
+input.input-text,
+select,
+textarea {
+  background: none;
+  font-family: inherit;
+  line-height: 1.6;
+  outline: 0;
+  margin: 0;
+  padding: 7px 15px;
+  border: 0;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  width: 100%;
+  background: #fff;
+}
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='number']:focus,
+input[type='date']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='time']:focus,
+input[type='month']:focus,
+input[type='week']:focus,
+input[type='email']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
+input.input-text:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Forms: Chrome - Input autofill background color */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+/* Button */
+.button,
+button,
+input[type='submit'] {
+  margin: 0 auto;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
+  padding: 9px 15px 10px;
+  border: 0 none;
+  background: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-align: center;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+input[type='submit']:hover {
+  color: #fff;
+  opacity: 0.82;
+}
+button:active,
+button:focus,
+input[type='submit']:active,
+input[type='submit']:focus {
+  outline: none;
+}
+.touch .button:hover,
+.touch .button:active,
+.touch .button:focus,
+.touch input[type='submit']:hover,
+.touch input[type='submit']:active,
+.touch input[type='submit']:focus {
+  opacity: 1;
+}
+
+/* #Typography
+--------------------------------------------------------------- */
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-weight: normal;
+  color: #000;
+  font-family: "Noto Sans TC variant4", Tofu;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  line-height: 1.2;
+  color: #000;
+  font-weight: bolder;
+}
+h1,
+h2 {
+  font-size: 2.3rem;
+  margin: 0 0 1rem;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-size: 2rem;
+}
+
+::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+:-moz-placeholder {
+  opacity: 0.5;
+} /* FF 4 to 18 */
+::-moz-placeholder {
+  opacity: 0.5;
+} /* FF 19+ */
+:-ms-input-placeholder {
+  opacity: 0.5;
+}
+@supports (-ms-accelerator: true) {
+  /* Fix: Edge placeholder text not displaying when opacity < 1 is used for webkit */
+  ::-webkit-input-placeholder {
+    opacity: 1;
+  }
+}
+
+/*! locomotive-scroll v4.0.6 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+[data-scroll-direction='horizontal'] [data-scroll-container] {
+  white-space: nowrap;
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+[data-scroll-direction='horizontal'] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-dragging .c-scrollbar,
+.has-scroll-scrolling .c-scrollbar {
+  opacity: 1;
+}
+[data-scroll-direction='horizontal'] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+[data-scroll-direction='horizontal'] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+[data-scroll-direction='horizontal'] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
