@@ -8,12 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="keywords" content="願望合夥人-MBTI小測驗" />
     <meta name="description" content="BIBO源自於西元1990年「映畫製作」拍攝的影視經典代表作「浴火鳳凰」。您與哪種MBTI特質的BIBO相似呢？" />
-    <meta property="og:url" content="https://biboverse.com/MBTI/psy" />
+    <meta property="og:url" content="https://mbti.biboverse.com/psy" />
     <meta property="og:locale" content="zh_TW" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="願望合夥人-MBTI小測驗" />
     <meta property="og:description" content="BIBO源自於西元1990年「映畫製作」拍攝的影視經典代表作「浴火鳳凰」。您與哪種MBTI特質的BIBO相似呢？" />
-    <meta property="og:image" content="https://biboverse.com/MBTI/img/bibo_silhouette.png" />
+    <meta property="og:image" content="https://mbti.biboverse.com/img/bibo_silhouette.png" />
     <meta property="og:image:width" content="496">
     <meta property="og:image:height" content="496">
     <meta property="og:image:type" content="image/png">
@@ -63,7 +63,7 @@
                 @click="btnStart()"
                 class="btn btn-start text-center w-full"
               >
-                <span class="text-2xl font-bold unselectable">開始測驗</span>
+                <span class="text-2xl font-bold unselectable cursor-default">開始測驗</span>
               </a>
             </div>
           </div>
@@ -111,7 +111,7 @@
                       class="btn quiz-btn-yellow text-center w-full"
                     >
                       <span
-                        class="text-xl font-bold unselectable"
+                        class="text-xl font-bold unselectable cursor-default"
                         v-text="question.answers[0].text"
                       ></span>
                     </a>
@@ -122,7 +122,7 @@
                       class="btn quiz-btn-blue text-center w-full"
                     >
                       <span
-                        class="text-xl font-bold unselectable"
+                        class="text-xl font-bold unselectable cursor-default"
                         v-text="question.answers[1].text"
                       ></span>
                     </a>
@@ -146,7 +146,7 @@
                   @click.prevent.stop="share()"
                   class="btn quiz-btn-blue text-center w-full"
                 >
-                  <span class="text-2xl font-bold">分享測驗</span>
+                  <span class="text-2xl font-bold cursor-default">分享測驗</span>
                 </a>
               </div>
               <div class="text-center text-content">
@@ -159,7 +159,7 @@
                   @click.prevent.stop="goHome()"
                   class="btn quiz-btn-blue text-center w-full"
                 >
-                  <span class="text-2xl font-bold">前往願望合夥人官網</span>
+                  <span class="text-2xl font-bold cursor-default">前往願望合夥人官網</span>
                 </a>
               </div>
             </div>
@@ -183,7 +183,7 @@
                   @click.prevent.stop="reset()"
                   class="btn quiz-btn-blue text-center w-full"
                 >
-                  <span class="text-2xl font-bold">再玩一次</span>
+                  <span class="text-2xl font-bold cursor-default">再玩一次</span>
                 </a>
               </div>
             </div>
@@ -476,7 +476,7 @@
           .share({
             title: 'MBTI',
             text: 'MBTI心理測驗',
-            url: 'https://biboverse.com/MBTI/psy',
+            url: 'https://mbti.biboverse.com/psy/index.html',
             <!-- files: [file], -->
           })
           .then(() => console.log('成功！'))
